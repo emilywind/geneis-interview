@@ -47,7 +47,7 @@ const checkJobs = () => {
   }
 }
 
-const queueJob = async (job: Job) => {
+const queueJob = (job: Job) => {
   jobs.push(job);
 
   checkJobs();
