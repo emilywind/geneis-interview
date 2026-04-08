@@ -71,14 +71,9 @@ const runJob = async (job: Job) => {
   addJobResult(job.id, job.message, time);
 
   const runningJobIndex = runningJobs.findIndex((currentJob) => currentJob.id === job.id);
-  const jobIndex = jobs.findIndex((currentJob) => currentJob.id === job.id);
 
   if (runningJobIndex !== -1) {
     runningJobs.splice(runningJobIndex, 1);
-  }
-
-  if (jobIndex !== -1) {
-    jobs.splice(jobIndex, 1);
   }
 
   checkJobs();
