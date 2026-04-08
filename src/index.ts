@@ -66,7 +66,7 @@ const runJob = async (job: Job) => {
 
   await waitForJob();
 
-  const time = Math.random();
+  const time = Math.random() * 1000;
 
   addJobResult(job.id, job.message, time);
 
