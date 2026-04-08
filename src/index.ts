@@ -37,7 +37,7 @@ const waitForJob = (): Promise<void> => {
   });
 };
 
-const checkJobs = async () => {
+const checkJobs = () => {
   if (jobs.length > 0 && runningJobs.length < MAX_JOBS) {
     const jobToRun = jobs.shift();
 
